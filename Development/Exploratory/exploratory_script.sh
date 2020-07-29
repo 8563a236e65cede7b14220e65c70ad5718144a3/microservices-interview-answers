@@ -44,3 +44,6 @@ pip3 install pip-tools nameko redis jinja2
 
 # Make application directory
 mkdir app && cd app
+
+# Build a rabbitmq Debian image
+docker image build -t rabbitmq_debian -f rabbitmq_debian .
