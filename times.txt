@@ -1,0 +1,7 @@
+Docker Engine Installation: 19
+Nameko, RabbitMQ, Python requirements: 33
+First microservice: 13
+Nameko unit testing, redis, integration testing, redis dependency provider: 95
+Adding/Retrieving message, jinja2 dependency provider: 40
+POST request, Redis Message Expiry, Sorting messages, Browser Polling: 95
+Recording learning times: 12
