@@ -20,11 +20,11 @@ RUN apt-get update && apt-get upgrade -y \
         erlang-runtime-tools erlang-snmp erlang-ssl \
         erlang-syntax-tools erlang-tftp erlang-tools erlang-xmerl \
     && \
-    service cron start && service exim4 start && service rabbitmq-server start \
+    service cron start && service exim4 start \
     && \
     apt-get install -y python3.7 python3-pip redis \
     && \
-    service redis-server start \
-    && \
     pip3 install pip-tools nameko redis jinja2 \
-    && mkdir app && cd app
+    && mkdir app
+
+COPY app /app

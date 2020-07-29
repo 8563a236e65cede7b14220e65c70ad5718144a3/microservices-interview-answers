@@ -6,3 +6,4 @@ Adding/Retrieving message, jinja2 dependency provider: 40
 POST request, Redis Message Expiry, Sorting messages, Browser Polling: 95
 Recording learning times: 12
 Exploratory docker image (debian_nameko): 145
+Exploratory docker image continued: 19:21

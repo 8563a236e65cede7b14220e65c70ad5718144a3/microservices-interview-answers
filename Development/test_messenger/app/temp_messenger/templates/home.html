@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="message_container"></div>
+    <form action="messages" id="postMessage">
+        <input type="text" name="message" placeholder="Post message">
+        <input type="submit" value="Post">
+    </form>
+    <script>
+        post_message = document.querySelector("#postMessage");
+        post_message.onsubmit = function(evt){
+            evt.preventDefault();
+            message = this.querySelector("input[name='message']").value;
+            url = this.getAttribute("action");
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("POST", url, true);
+            xhttp.responseType = "json";
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 204) {
+                    window.location.reload();
+                }
+            };
+            xhttp.setRequestHeader("Content-type", "application/json")
+            xhttp.send(JSON.stringify({message: message}));
+        };
+
+        function messagePoll(){
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "/messages", true);
+            xhttp.responseType = "json";
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.response);
+                    updateMessages(this.response);
+                }
+            };
+            xhttp.send();
+
+            setTimeout(messagePoll, 2000);
+        }
+
+        function updateMessages(messages){
+            var messageContainer = document.querySelector("#message_container");
+            var messageList = [];
+            var emptyMessages = "<p>No messages!</p>"
+            console.log(messages);
+            if(messages.length == 0){
+                messageContainer.innerHTML = emptyMessages;
+            } else {
+                for(i=0; i<messages.length; i++){
+                    messageList.push("<p>" + messages[i].message + "</p>");
+                }
+                messageContainer.innerHTML = messageList.join("");
+            }
+        }
+
+        messagePoll();
+    </script>
+</body>
+</html>
