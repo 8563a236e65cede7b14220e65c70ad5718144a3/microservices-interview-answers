@@ -10,4 +10,6 @@ Exploratory docker image continued (rabbitmq_debian): 87
 Read Nameko Documentation: 17
 Create base nameko image (nameko_base): 10
 Read up about container networking: 23
-Try test_messenger example again: 22:29
+Try test_messenger example again: 90
+Figure out why nameko shell isn't working: 20
+Build invictus service: 12:20

@@ -1,2 +1,2 @@
-FROM debian_nameko
+FROM nameko_base
 COPY app /app
