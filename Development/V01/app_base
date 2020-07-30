@@ -4,3 +4,6 @@ COPY app /app
 WORKDIR app/
 RUN pip-compile requirements/base.in; \
     pip-compile requirements/test.in
+
+ENTRYPOINT ["nameko"]
+CMD ["run", "invictus.service", "--config", "config.yaml"]
