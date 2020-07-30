@@ -1,1 +1,2 @@
+# Use debian as base OS
 FROM debian:latest

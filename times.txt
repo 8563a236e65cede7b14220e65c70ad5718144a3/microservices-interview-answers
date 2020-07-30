@@ -15,4 +15,4 @@ Figure out why nameko shell isn't working: 20
 Build invictus service (V01): 238 
 Code cleanup and commenting: 60
 Docker entrypoint and dynamic configuration file building: 40
-
+README: 80

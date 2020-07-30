@@ -1,7 +1,11 @@
-FROM debian:latest
+# Take the newly created OS as a layer
+FROM base_debian
+
+# Prepare the system for usage with nameko
 RUN apt-get update && apt-get upgrade -y; \
     apt-get install -y dnsutils python3.7 python3-pip; \
     pip3 install pip-tools nameko redis jinja2 pytest; \
     mkdir app
 
+# Copy an application skeleton
 COPY app /app

@@ -1,10 +1,21 @@
+# Take the nameko_base image as a layer
 FROM nameko_base
+
+# Install app specific dependencies
 RUN pip install dahuffman
+
+# Copy the application logic
 COPY app /app
+
+# Change to the app directory
 WORKDIR app/
+
+# Compile pip requirements and make entrypoint
+# executable
 RUN pip-compile requirements/base.in; \
     pip-compile requirements/test.in; \
     chmod 700 /app/docker_entrypoint.sh; \
     chmod +x /app/docker_entrypoint.sh
 
+# Run entrypoint script
 CMD ["/bin/bash", "/app/docker_entrypoint.sh"]
