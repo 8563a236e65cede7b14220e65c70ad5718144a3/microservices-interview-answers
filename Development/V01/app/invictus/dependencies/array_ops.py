@@ -7,19 +7,31 @@ from nameko.extensions import DependencyProvider
 
 
 class ArrayOps:
-
-    def __init__(self):
-        self.int_arr = list()
-
-    def square_odds(self, int_arr):
-        self.int_arr = int_arr
-        for i in range(len(self.int_arr)):
-            if i % 2 == 1:
-                self.int_arr[i] *= self.int_arr[i]
+    """
+    The ArrayOps class forms the base of the dependency
+    provider for array operations.
+    """
+    @staticmethod
+    def square_odds(int_arr):
+        """
+        Squares all entries within the given list of
+        integers that are odd numbers. Loop through the list
+        and check if each entry is odd with modulus operator.
+        If true, square entry, otherwise leave entry alone.
+        :param int_arr: a list of integers
+        :return: the list of integers with odd numbers squared
+        """
+        int_arr = int_arr
+        for i in range(len(int_arr)):
+            if int_arr[i] % 2 == 1:
+                int_arr[i] *= int_arr[i]
+        return int_arr
 
 
 class ArrayOpsProvider(DependencyProvider):
-
+    """
+    Dependency Provider class for the array_ops service
+    """
     def setup(self):
         self.arr_op = ArrayOps()
 

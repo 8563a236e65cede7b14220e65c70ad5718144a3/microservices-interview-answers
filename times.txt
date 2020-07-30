@@ -12,5 +12,5 @@ Create base nameko image (nameko_base): 10
 Read up about container networking: 23
 Try test_messenger example again: 90
 Figure out why nameko shell isn't working: 20
-Build invictus service: 238 + 
-
+Build invictus service (V01): 238 
+Code cleanup and commenting: 60
