@@ -1,5 +1,6 @@
 FROM nameko_base
+RUN pip install dahuffman
+COPY app /app
 WORKDIR app/
-RUN pip install dahuffman; \
-    pip-compile requirements/base.in; \
+RUN pip-compile requirements/base.in; \
     pip-compile requirements/test.in
