@@ -1,6 +1,6 @@
 FROM debian:latest
 RUN apt-get update && apt-get upgrade -y; \
-    apt-get install -y python3.7 python3-pip; \
+    apt-get install -y dnsutils python3.7 python3-pip; \
     pip3 install pip-tools nameko redis jinja2 pytest; \
     mkdir app
 

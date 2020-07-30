@@ -3,7 +3,8 @@ RUN pip install dahuffman
 COPY app /app
 WORKDIR app/
 RUN pip-compile requirements/base.in; \
-    pip-compile requirements/test.in
+    pip-compile requirements/test.in; \
+    chmod 700 /app/docker_entrypoint.sh; \
+    chmod +x /app/docker_entrypoint.sh
 
-ENTRYPOINT ["nameko"]
-CMD ["run", "invictus.service", "--config", "config.yaml"]
+CMD ["/bin/bash", "/app/docker_entrypoint.sh"]

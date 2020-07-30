@@ -1,3 +1,2 @@
-AMQP_URI: "pyamqp://guest:guest@172.19.0.2"
+AMQP_URI: "pyamqp://guest:guest@rabbitmq_interview"
 rpc_exchange: "nameko-rpc"
-REDIS_URL: 'redis://172.19.0.3:6379/0'
