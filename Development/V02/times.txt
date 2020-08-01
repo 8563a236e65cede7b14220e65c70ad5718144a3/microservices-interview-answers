@@ -1,5 +1,6 @@
 Create alpine_build image: 23
 RabbitMQ C client documentation/experimentation: 20
 Create rabbitmq_c image: 95
-exploratory app development rabbitmq_c_app: 32 +
-
+exploratory app development rabbitmq_c_app: 84 
+Go through examples/server.c to create test_server.c: 60
+Go through examples/client.c to create test_client.c:
