@@ -1,0 +1,44 @@
+ 0 apk update && \
+   1     apk add --update alpine-sdk
+   2 ls
+   3 apk install cmake
+   4 apk add cmake
+   5 git clone https://github.com/alanxz/rabbitmq-c.git
+   6 ls
+   7 cd rabbitmq-c
+   8 mkdir build
+   9 cd build
+  10 cmake ..
+  11 apok add openssl
+  12 apk add openssl
+  13 find / --name openssl
+  14 find / -name openssl
+  15 find / -name openssl-dev
+  16 apk add openssl-dev
+  17 ls
+  18 rm -rf *
+  19 cmake ..
+  20 ls
+  21 rm -rf *
+  22 cmake -DBUILD_TOOLS_DOCS=OFF ..
+  23 apk add xmlto
+  24 apk add doxygen
+  25 apk add popt
+  26 ls
+  27 rm -rf *
+  28 cmake ..
+  29 apk add popt-dev
+  30 apk add doxygen-dev
+  31 apk add xmlto-dev
+  32 rm -rf *
+  33 cmake ..
+  34 cmake --build .
+  35 ls
+  36 cmake install
+  37 cmake --install
+  38 rm -rf *
+  39 cmake ..
+  40 cmake --bui;d . --target install
+  41 cmake --build . --target install
+  42 history | less
+

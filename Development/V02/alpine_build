@@ -1,0 +1,10 @@
+# Build a base alpine development image
+FROM alpine:latest
+
+# Install required development libraries
+RUN apk update \
+    && apk add --update alpine-sdk cmake openssl openssl-dev \
+        xmlto doxygen popt popt-dev
+
+# Copy an application skeleton
+COPY app /app
