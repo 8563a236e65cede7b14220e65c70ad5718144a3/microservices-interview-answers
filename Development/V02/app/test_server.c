@@ -73,7 +73,7 @@
     amqp_channel_open(conn, 1);
 
     // Check for errors
-    die_on_amqp_error(amqp_err_check, "Opening Channel");
+    die_on_amqp_error(amqp_get_rpc_reply(conn), "Opening Channel");
 
     // Declare a queue
     // amqp_queue_declare(
