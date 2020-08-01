@@ -1,0 +1,6 @@
+FROM rabbitmq_build as build
+FROM alpine:latest
+COPY --from=build /rbmq.tar /rbmq.tar
+RUN tar -xvf rbmq.tar && cp -R /usr/local/lib64/* /usr/local/lib/ \
+    && rm /rbmq.tar && rm -rf rabbitmq-c
+

@@ -42,3 +42,34 @@
   41 cmake --build . --target install
   42 history | less
 
+   8 ping
+   9 ping 172.17.0.3
+  10 cd examples/
+  11 ls
+  12 ./amqp_listen 172.17.0.3 5672 amq.direct test
+  13 ./amqp_listen 172.17.0.3 5672 amq.direct test &
+  14 ./amqp_sendstring 172.17.0.3 5672 amq.direct test "hello world"
+  15 fg
+  16 ./amqp_sendstring 172.17.0.3 5672 amq.direct test "hello world"
+  17 history | less
+
+-- Install configuration: "Release"
+/usr/local/lib64/cmake/rabbitmq-c/rabbitmq-c-config.cmake
+/usr/local/lib64/cmake/rabbitmq-c/rabbitmq-c-config-version.cmake
+/usr/local/lib64/cmake/rabbitmq-c/rabbitmq-targets.cmake
+/usr/local/lib64/cmake/rabbitmq-c/rabbitmq-targets-release.cmake
+/usr/local/lib64/pkgconfig/librabbitmq.pc
+/usr/local/lib64/librabbitmq.so.4.4.1
+/usr/local/lib64/librabbitmq.so.4
+/usr/local/lib64/librabbitmq.so
+/usr/local/lib64/librabbitmq.a
+/usr/local/include/amqp.h
+/usr/local/include/amqp_framing.h
+/usr/local/include/amqp_tcp_socket.h
+/usr/local/include/amqp_ssl_socket.h
+/usr/local/bin/amqp-publish
+/usr/local/bin/amqp-get
+/usr/local/bin/amqp-consume
+/usr/local/bin/amqp-declare-queue
+/usr/local/bin/amqp-delete-queue
+

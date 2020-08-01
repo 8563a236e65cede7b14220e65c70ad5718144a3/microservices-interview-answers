@@ -1,0 +1,22 @@
+FROM alpine_build as build
+RUN git clone https://github.com/alanxz/rabbitmq-c.git
+WORKDIR rabbitmq-c
+RUN mkdir build
+WORKDIR build
+RUN cmake .. && cmake --build . --target install
+WORKDIR /
+RUN tar -cvf rbmq.tar /usr/local/lib64/pkgconfig/librabbitmq.pc \
+    /usr/local/lib64/librabbitmq.so.4.4.1 \
+    /usr/local/lib64/librabbitmq.so.4 \
+    /usr/local/lib64/librabbitmq.so \
+    /usr/local/lib64/librabbitmq.a \
+    /usr/local/include/amqp.h \
+    /usr/local/include/amqp_framing.h \
+    /usr/local/include/amqp_tcp_socket.h \
+    /usr/local/include/amqp_ssl_socket.h \
+    /usr/local/bin/amqp-publish \
+    /usr/local/bin/amqp-get \
+    /usr/local/bin/amqp-consume \
+    /usr/local/bin/amqp-declare-queue \
+    /usr/local/bin/amqp-delete-queue \
+    /rabbitmq-c/build/examples

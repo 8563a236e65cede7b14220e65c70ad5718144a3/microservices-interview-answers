@@ -1,2 +1,4 @@
 Create alpine_build image: 23
+RabbitMQ C client documentation/experimentation: 20
+Create rabbitmq_c image: 95 + 
 
