@@ -19,4 +19,8 @@ RUN tar -cvf rbmq.tar /usr/local/lib64/pkgconfig/librabbitmq.pc \
     /usr/local/bin/amqp-consume \
     /usr/local/bin/amqp-declare-queue \
     /usr/local/bin/amqp-delete-queue \
-    /rabbitmq-c/build/examples
+    /rabbitmq-c/build/examples \
+    && cp -R /usr/local/lib64/libra* /usr/local/lib/
+
+# Copy an application skeleton
+COPY app /app

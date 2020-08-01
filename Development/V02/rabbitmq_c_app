@@ -1,0 +1,4 @@
+FROM rabbitmq_c
+
+# Copy an application skeleton
+COPY app /app
