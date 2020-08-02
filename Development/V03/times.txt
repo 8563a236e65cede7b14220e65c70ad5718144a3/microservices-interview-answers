@@ -1,4 +1,4 @@
 RabbitMQ Pika Tutorial 1: 24
 RabbitMQ Pika Tutorial 2: 30
 RabbitMQ Pika Tutorial 3: 23
-RabbitMQ Pika Tutorial 4: 
+RabbitMQ Pika Tutorial 4: 16
