@@ -2,23 +2,23 @@
  *  Test server Implementation
  */
 
- #include <stdint.h>
- #include <stdio.h>
- #include <stdlib.h>
- #include <string.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
- #include <amqp.h>
- #include <amqp_tcp_socket.h>
+#include <amqp.h>
+#include <amqp_tcp_socket.h>
 
- #include <assert.h>
- #include "utils.h"
+#include <assert.h>
+#include "utils.h"
 
- int main(int argc, char** argv){
+int main(int argc, char** argv){
 
     // The AMQP connection needs the hostname, port,
     // exchange type (amq.direct, amq.fanout, amq.topic, amq.match)
     // and binding key to create the connection
-    char hostname[] = "172.17.0.3";
+    char hostname[] = "172.18.0.2";
     int port = 5672, status;
     char exchange[] = "amq.direct";
     char bindingkey[] = "test_c";
@@ -148,7 +148,6 @@
             amqp_pool_t pool;                   pool used to allocate properties
         } amqp_message_t;
 
-
         typedef struct amqp_bytes_t_ {
             size_t len;     length of the buffer in bytes
             void *bytes;    pointer to the beginning of the buffer
@@ -192,4 +191,4 @@
 
     return 0;
 
- }
+}

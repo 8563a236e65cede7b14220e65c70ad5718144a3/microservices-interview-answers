@@ -2,19 +2,19 @@
  * Test client implementation
  */
 
- #include <stdint.h>
- #include <stdio.h>
- #include <stdlib.h>
- #include <string.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
- #include <amqp.h>
- #include <amqp_tcp_socket.h>
+#include <amqp.h>
+#include <amqp_tcp_socket.h>
 
- #include "utils.h"
+#include "utils.h"
 
- int main(int argc, char** argv){
+int main(int argc, char** argv){
 
-    char hostname[] = "172.17.0.3";
+    char hostname[] = "172.18.0.2";
     int port = 5672, status;
     char exchange[] = "amq.direct";
     char routingkey[] = "test_c";
@@ -97,4 +97,5 @@
 
     die_on_error(amqp_destroy_connection(conn), "Ending Connection");
 
- }
+    return 0;
+}

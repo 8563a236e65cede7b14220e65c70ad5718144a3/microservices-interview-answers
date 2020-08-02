@@ -2,9 +2,10 @@ Create alpine_build image: 23
 RabbitMQ C client documentation/experimentation: 20
 Create rabbitmq_c image: 95
 exploratory app development rabbitmq_c_app: 84 
-Go through examples/server.c to create test_server.c: 60
+Go through examples/amqp_listen.c to create test_server.c: 60
 Reading through project source code: 34
 Reading rabbitmq python tutorial (https://www.rabbitmq.com/tutorials/tutorial-one-python.html): 30
 Testing C consumer listener, python publisher: 20
-Go through examples/client.c to create test_client.c: 35
+Go through examples/amqp_sendstring.c to create test_client.c: 35
+Go through examples/amqp_rpc_sendstring_client.c to create test_client_rpc.c: 96
 Accumulated general research: 30 
