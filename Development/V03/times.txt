@@ -1,1 +1,3 @@
-RabbitMQ Pika Tutorial 1: 12:46 -
+RabbitMQ Pika Tutorial 1: 24
+RabbitMQ Pika Tutorial 2: 30
+RabbitMQ Pika Tutorial 3: 
