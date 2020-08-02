@@ -1,0 +1,5 @@
+FROM python:3.8-slim-buster
+RUN pip install pika dahuffman
+
+# Copy an application skeleton
+COPY app /app
