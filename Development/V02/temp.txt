@@ -78,8 +78,8 @@
 
 gcc server.c utils.c platform_utils.c -lrabbitmq -o server
 gcc client.c  utils.c platform_utils.c -lrabbitmq -o client
-./server 172.17.0.3 5672 amq.direct test &
-./client 172.17.0.3 5672 amq.direct test "hello world"
+./server 172.18.0.2 5672 amq.direct test &
+./client 172.18.0.2 5672 amq.direct test "hello world"
 gcc server.c utils.c platform_utils.c -lrabbitmq -o server
 gcc client.c utils.c platform_utils.c -lrabbitmq -o client
 

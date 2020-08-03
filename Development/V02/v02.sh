@@ -9,3 +9,5 @@ docker image build -t rabbitmq_c -f rabbitmq_c_client .
 
 #Build rabbitmq_c_app
 docker image build -t rabbitmq_c_app -f rabbitmq_c_app .
+
+docker container run -it --network interview-net rabbitmq_build

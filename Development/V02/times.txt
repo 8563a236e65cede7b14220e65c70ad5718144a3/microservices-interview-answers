@@ -9,4 +9,4 @@ Testing C consumer listener, python publisher: 20
 Go through examples/amqp_sendstring.c to create test_client.c: 35
 Go through examples/amqp_rpc_sendstring_client.c to create test_client_rpc.c: 96
 Accumulated general research: 45
-RabbitMQ Pika Tutorial 1 C Conversion:
+RabbitMQ Pika Tutorial 1 C Conversion: 156 

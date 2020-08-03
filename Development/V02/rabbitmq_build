@@ -24,4 +24,4 @@ RUN tar -cvf rbmq.tar /usr/local/lib64/pkgconfig/librabbitmq.pc \
 
 # Copy an application skeleton
 COPY app /app
-COPY tutorial /tutorial
+COPY app/tutorial /tutorial
