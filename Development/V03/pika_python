@@ -3,3 +3,5 @@ RUN pip install pika dahuffman
 
 # Copy an application skeleton
 COPY app /app
+
+CMD ["python", "/app/service.py"]

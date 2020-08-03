@@ -5,3 +5,4 @@ RabbitMQ Pika Tutorial 4: 16
 RabbitMQ Pika Tutorial 5: 13
 RabbitMQ Pika Tutorial 6: 48
 Invictus Assessment: 176
+Code Cleanup/Shell Scripts: 20
