@@ -80,5 +80,7 @@ gcc server.c utils.c platform_utils.c -lrabbitmq -o server
 gcc client.c  utils.c platform_utils.c -lrabbitmq -o client
 ./server 172.17.0.3 5672 amq.direct test &
 ./client 172.17.0.3 5672 amq.direct test "hello world"
-gcc test_server.c utils.c platform_utils.c -lrabbitmq -o server
-gcc test_client.c utils.c platform_utils.c -lrabbitmq -o client
+gcc server.c utils.c platform_utils.c -lrabbitmq -o server
+gcc client.c utils.c platform_utils.c -lrabbitmq -o client
+
+docker container run -it --network interview-net rabbitmq_build
