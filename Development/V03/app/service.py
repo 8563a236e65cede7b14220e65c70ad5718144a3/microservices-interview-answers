@@ -3,6 +3,7 @@ Service API
 """
 import pika
 import json
+import socket
 import dependencies.array_ops as arr_op
 import dependencies.huffman as huff
 
@@ -42,7 +43,7 @@ def on_request(ch, method, props, body):
 def main():
     # Create blocking connection to RabbitMQ server
     connection = pika.BlockingConnection(
-        pika.ConnectionParameters("172.18.0.2")
+        pika.ConnectionParameters(socket.gethostbyname("rabbitmq_interview"))
     )
 
     # Open a channel

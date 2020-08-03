@@ -8,5 +8,5 @@ Reading rabbitmq python tutorial (https://www.rabbitmq.com/tutorials/tutorial-on
 Testing C consumer listener, python publisher: 20
 Go through examples/amqp_sendstring.c to create test_client.c: 35
 Go through examples/amqp_rpc_sendstring_client.c to create test_client_rpc.c: 96
-Accumulated general research: 30
-RabbitMQ Pika Tutorial 1:
+Accumulated general research: 45
+RabbitMQ Pika Tutorial 1 C Conversion:

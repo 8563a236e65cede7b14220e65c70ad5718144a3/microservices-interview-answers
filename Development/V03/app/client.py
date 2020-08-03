@@ -1,6 +1,7 @@
 import pika
 import uuid
 import json
+import socket
 
 
 def pika_init(self):
@@ -8,7 +9,7 @@ def pika_init(self):
     self.corr_id = None
 
     self.connection = pika.BlockingConnection(
-        pika.ConnectionParameters("172.18.0.2")
+        pika.ConnectionParameters(socket.gethostbyname("rabbitmq_interview"))
     )
 
     self.channel = self.connection.channel()
